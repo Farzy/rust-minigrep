@@ -11,6 +11,10 @@ fn main() {
     println!("Searching from '{}'", config.query);
     println!("In file '{}'", config.filename);
 
+    run(config);
+}
+
+fn run(config: Config) {
     let content = fs::read_to_string(config.filename)
         .expect("Something went wrong reading the file");
 
